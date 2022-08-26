@@ -19,12 +19,12 @@ const Item = ({id,img,title,description,price,quantity}) => {
                 </div>
                 <div className="add-minus-quantity">
                     <AiOutlineMinus
-                     onClick={()=>decrement(id)}
+                    onClick={()=>decrement(id)}
                      className="fas fa-minus minus"
                       />
                     <input type="text" placeholder={quantity} disabled />
                     <AiOutlinePlus
-                     onClick={()=>increment(id)}
+                   onClick={()=>increment(id)}
                      className="fas fa-plus add"
                       />
                 </div>

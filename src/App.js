@@ -42,19 +42,20 @@ const App = () => {
   }
 
   const increment = (id) => {
-    dispatch({ type: 'INCREASE', payload: id })
+    dispatch({type:'INCREASE', payload:id})
   }
 
   const decrement = (id) => {
-    dispatch({ type: 'DECREASE', payload: id })
+    dispatch({type:'DECREASE', payload:id})
   }
+ 
 
 
   return (
     <div>
       <global_props.Provider
         value={
-          { ...state, removeItem, removeall, increment, decrement }
+          { ...state, removeItem, removeall, increment, decrement  }
         }>
         <Cart />
       </global_props.Provider>

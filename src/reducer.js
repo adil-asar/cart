@@ -13,18 +13,19 @@ const Reducer = (state, action) => {
     if (action.type === 'REMOVEALL') {
         return { ...state, item: [] }
     }
+ 
+    // increase item 
 
-    if (action.type === 'INCREASE') {
-        const updateincrease = state.item.map((elem) => {
-            if (elem.id === action.payload) {
-                return { ...elem,
-                     quantity: elem.quantity + 1 
-                    };
-            }
-            return elem
-        })
-        return { ...state, item: updateincrease }
-    }
+  if (action.type === 'INCREASE') {
+    
+    const inc_item = state.item.map((elem)=>{
+        if (elem.id === action.payload) {
+            return {...elem, quantity:elem.quantity+1}
+        }
+        return elem
+  })
+  return  {...state,item:inc_item}
+}
 
     if (action.type === 'DECREASE') {
         const updatedecrease = state.item.map((elem) => {

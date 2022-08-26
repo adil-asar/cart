@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.parent{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child{
+  width: 30%;
+  height: 40vh;
+  background-color: cornflowerblue;
+  display: flex;
+  font-family: cursive;
+  justify-content: center;
+  border-radius: 1rem;
+  align-items: center;
+  text-align: center;
+padding: 1rem;
+}
+.change{
+  background-color: black;
+  color: white;
+}
+.button_css{
+  font-family: cursive;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  border:  2px solid black;
+  background: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.btn_css{
+  color: white;
+  border:  2px solid white;
+}
+

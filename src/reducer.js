@@ -44,7 +44,7 @@ const Reducer = (state, action) => {
             let { quantity,price } = curVal;
             let updatetotalamount = price*quantity
             accum.totalItem += quantity;
-            accum.totalAmount +=updatetotalamount 
+            accum.totalAmount +=updatetotalamount
             return accum;
         }, {
             totalItem: 0,

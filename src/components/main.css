@@ -134,7 +134,7 @@ header {
   box-shadow: rgba(0, 0, 0, 0.08) 0rem 0.4rem 1.2rem;
   border-radius: 2rem;
   margin: auto;
-  background-color: lavender;
+  background-color: lightpink;
  
   display: grid;
   place-items: center;
@@ -150,7 +150,6 @@ header {
   box-shadow: rgba(0, 0, 0, 0.08) 0rem 0.4rem 1.2rem;
   border-radius: 2rem;
   margin: 1rem auto;
-  background-color: lavender;
   display: grid;
   place-items: center;
 }

@@ -15,44 +15,40 @@ const Reducer = (state, action) => {
     }
  
     // increase item 
-
-  if (action.type === 'INCREASE') {
-    
+if (action.type==='INCREASE') {
     const inc_item = state.item.map((elem)=>{
         if (elem.id === action.payload) {
-            return {...elem, quantity:elem.quantity+1}
+            return{...elem, quantity:elem.quantity + 1}
         }
         return elem
-  })
-  return  {...state,item:inc_item}
+    })
+    return{...state,item:inc_item}
 }
 
-    if (action.type === 'DECREASE') {
-        const updatedecrease = state.item.map((elem) => {
-            if (elem.id === action.payload) {
-                return { ...elem, quantity: elem.quantity - 1};
-                //  if (elem.quantity>1) {
-                //     return {...elem,quantity:elem.quantity-1};
-                //  }
-            }
-            return elem
-        }).filter((elem) => elem.quantity !== 0)
-        return { ...state, item: updatedecrease }
-    }
+// decrease item 
 
-    if (action.type === 'total_item') {
-        let { totalItem,totalAmount } = state.item.reduce((accum, curVal) => {
-            let { quantity,price } = curVal;
-            let updatetotalamount = price*quantity
-            accum.totalItem += quantity;
-            accum.totalAmount +=updatetotalamount
-            return accum;
-        }, {
-            totalItem: 0,
-            totalAmount : 0
-        })
-        return { ...state, totalItem,totalAmount }
-    }
+if (action.type==='DECREASE') {
+    const dec_item = state.item.map((elem)=>{
+        if (elem.id === action.payload) {
+            return {...elem, quantity:elem.quantity-1}
+        }
+        return elem
+    }).filter((fil)=>fil.quantity!==0)
+    return {...state,item:dec_item}
+}
+
+
+ if (action.type === 'total_item_amount') {
+    
+    let {totalItem} = state.item.reduce((Acum,Val)=> {
+        let {quantity} = Val;
+        Acum.totalItem += quantity;
+        return Acum
+
+    } , {totalItem:0} )
+
+    return {...state,totalItem}
+ }
 
 
 

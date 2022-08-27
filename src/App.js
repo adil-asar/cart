@@ -30,7 +30,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    dispatch({type:'total_item'})
+    dispatch({type:'total_item_amount'})
    
   }, [state.item])
 

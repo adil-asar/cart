@@ -52,7 +52,7 @@ export const products = [
       id: 7,
       title: "Samsung S21",
       description: "black in color",
-      price: 220,
+      price:200,
       img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       quantity: 1,
     },
@@ -60,7 +60,7 @@ export const products = [
       id: 8,
       title: "Iphone 12",
       description: "Best mobile ever",
-      price: 700,
+      price:200,
       img: "https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg",
       quantity: 1,
     },
@@ -68,8 +68,7 @@ export const products = [
       id: 9,
       title: "Samsung S21",
       description: "black in color",
-      price: 340,
+      price:200,
       img: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       quantity: 1,
-    },
-  ];
+    }]

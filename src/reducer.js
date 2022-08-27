@@ -40,14 +40,17 @@ if (action.type==='DECREASE') {
 
  if (action.type === 'total_item_amount') {
     
-    let {totalItem} = state.item.reduce((Acum,Val)=> {
-        let {quantity} = Val;
+    let {totalItem,totalAmount} = state.item.reduce((Acum,Val)=> {
+        let {quantity,price} = Val;
         Acum.totalItem += quantity;
+        let amount = quantity * price
+        Acum.totalAmount += amount
+
         return Acum
 
-    } , {totalItem:0} )
+    } , {totalItem:0,totalAmount:0} )
 
-    return {...state,totalItem}
+    return {...state,totalItem,totalAmount}
  }
 
 
